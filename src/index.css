@@ -2,9 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  background-color: #070707;
-  color: #f4f4f5;
-  font-family: system-ui, -apple-system, sans-serif;
-  overflow-x: hidden;
+@layer base {
+  html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #131313;
+    color: #e5e2e1;
+    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
